@@ -1,0 +1,54 @@
+@import "colors.scss";
+
+.inputArea {
+  .billContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    label {
+      color: $dark-grayish-cyan;
+    }
+
+    div {
+      align-items: center;
+      background-color: $very-light-grayish-cyan;
+      border-radius: 4px;
+      column-gap: 0.3rem;
+      display: flex;
+      padding: 0 0.8rem;
+      transition: all 0.2s;
+
+      img {
+        width: 0.8rem;
+      }
+
+      input {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        color: $very-dark-cyan;
+        outline: none;
+        padding: 0.5rem 0;
+        text-align: right;
+        width: 100%;
+        font-weight: 700;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input::placeholder {
+        text-align: right;
+      }
+    }
+
+    div:hover {
+      box-shadow: 0 0 1px 1.5px $strong-cyan;
+    }
+  }
+}

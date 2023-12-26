@@ -1,0 +1,17 @@
+@import "colors.scss";
+
+.mainContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 80rem;
+  min-width: 20rem;
+  row-gap: 2rem;
+
+  .logoContainer {
+    img {
+      width: 5rem;
+    }
+  }
+}
