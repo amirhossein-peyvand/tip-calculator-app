@@ -1,0 +1,49 @@
+@import "colors.scss";
+
+.screenArea {
+  background-color: $very-dark-cyan;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  row-gap: 2rem;
+
+  .group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.2rem;
+
+      span:first-child {
+        color: $light-grayish-cyan;
+      }
+
+      span:last-child {
+        color: $grayish-cyan;
+      }
+    }
+
+    p {
+      color: $strong-cyan;
+    }
+  }
+
+  .resetBtn {
+    background-color: $strong-cyan;
+    border-radius: 3px;
+    border: none;
+    color: $very-dark-cyan;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    transition: all 0.2s;
+  }
+
+  .resetBtn:hover,
+  .resetBtn:focus {
+    background-color: $light-grayish-cyan;
+  }
+}
