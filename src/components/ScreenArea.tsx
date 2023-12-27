@@ -8,14 +8,19 @@ const ScreenArea = () => {
           <span>Tip Amount</span>
           <span>/ person</span>
         </div>
-        <p className="tipAmount">$0.00</p>
+        <p className="tipAmount">
+          <span>$</span>
+          0.00
+        </p>
       </div>
       <div className="group">
         <div className="left">
           <span>Total</span>
           <span>/ person</span>
         </div>
-        <p className="totalAmount">$0.00</p>
+        <p className="totalAmount">
+          <span>$</span>0.00
+        </p>
       </div>
       <button className="resetBtn">RESET</button>
     </section>

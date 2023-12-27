@@ -149,3 +149,54 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) {
+  .inputArea {
+    .billContainer {
+      font-size: 1.3rem;
+
+      div {
+        input {
+          font-size: 1.5rem;
+        }
+
+        img {
+          width: 1rem;
+        }
+      }
+    }
+
+    .tipsPart {
+      font-size: 1.3rem;
+
+      button {
+        font-size: 1.5rem;
+      }
+    }
+
+    .peopleArea {
+      font-size: 1.3rem;
+
+      div {
+        img {
+          width: 1rem;
+        }
+
+        input {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .inputArea {
+    .tipsPart {
+      .tipOptions {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+  }
+}

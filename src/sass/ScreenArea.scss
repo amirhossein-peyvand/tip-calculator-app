@@ -28,6 +28,11 @@
     }
 
     p {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 1.8rem;
+      }
       color: $strong-cyan;
     }
   }
@@ -45,5 +50,19 @@
   .resetBtn:hover,
   .resetBtn:focus {
     background-color: $light-grayish-cyan;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .screenArea {
+    font-size: 1.4rem;
+
+    .group {
+      p {
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }

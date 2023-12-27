@@ -9,3 +9,20 @@
   row-gap: 2rem;
   width: 100%;
 }
+
+@media screen and (min-width: 700px) {
+  .tipCalculator {
+    border-radius: 10px;
+    column-gap: 3rem;
+    flex-direction: row;
+    padding: 2rem;
+
+    .inputArea {
+      width: 50%;
+    }
+
+    .screenArea {
+      width: 50%;
+    }
+  }
+}
