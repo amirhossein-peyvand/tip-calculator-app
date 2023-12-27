@@ -1,6 +1,10 @@
 @import "colors.scss";
 
 .inputArea {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+
   .billContainer {
     display: flex;
     flex-direction: column;
@@ -49,6 +53,48 @@
 
     div:hover {
       box-shadow: 0 0 1px 1.5px $strong-cyan;
+    }
+  }
+
+  .tipsPart {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    span {
+      color: $dark-grayish-cyan;
+    }
+
+    .tipOptions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .tipPercentage {
+        background-color: $very-dark-cyan;
+        border-radius: 4px;
+        border: none;
+        color: $light-grayish-cyan;
+        cursor: pointer;
+        padding: 0.7rem 0;
+        transition: all 0.2s;
+      }
+
+      .tipPercentage:hover:not(.custom),
+      .tipPercentage:focus:not(.custom) {
+        background-color: $strong-cyan;
+        color: $very-dark-cyan;
+      }
+
+      .custom {
+        background-color: $very-light-grayish-cyan;
+        color: $dark-grayish-cyan;
+      }
+
+      .custom:hover,
+      .custom:focus {
+        box-shadow: 0 0 1px 1.5px $strong-cyan;
+      }
     }
   }
 }
