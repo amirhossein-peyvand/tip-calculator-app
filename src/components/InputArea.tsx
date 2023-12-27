@@ -1,5 +1,6 @@
 import dolorSign from "../assets/icon-dollar.svg";
 import "../sass/InputArea.scss";
+import person from "../assets/icon-person.svg";
 
 const InputArea = () => {
   return (
@@ -22,7 +23,13 @@ const InputArea = () => {
           <button className="tipPercentage custom">Custom</button>
         </div>
       </section>
-      <div></div>
+      <section className="peopleArea">
+        <label htmlFor="numOfPeople">Number of People</label>
+        <div>
+          <img src={person} alt="person" />
+          <input type="number" id="numOfPeople" placeholder="0" />
+        </div>
+      </section>
     </section>
   );
 };
