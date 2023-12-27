@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  font-size: 1.2rem;
 
   .billContainer {
     display: flex;
@@ -24,7 +25,7 @@
       transition: all 0.2s;
 
       img {
-        width: 0.8rem;
+        width: 1rem;
       }
 
       input {
@@ -33,6 +34,7 @@
         background-color: transparent;
         border: none;
         color: $very-dark-cyan;
+        font-size: 1.5rem;
         outline: none;
         padding: 0.5rem 0;
         text-align: right;
@@ -76,6 +78,8 @@
         border: none;
         color: $light-grayish-cyan;
         cursor: pointer;
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
         padding: 0.7rem 0;
         transition: all 0.2s;
       }
@@ -117,7 +121,7 @@
       transition: all 0.2s;
 
       img {
-        width: 0.8rem;
+        width: 1rem;
       }
 
       input {
@@ -126,6 +130,7 @@
         background-color: transparent;
         border: none;
         color: $very-dark-cyan;
+        font-size: 1.5rem;
         outline: none;
         padding: 0.5rem 0;
         text-align: right;
@@ -152,38 +157,36 @@
 
 @media screen and (min-width: 360px) {
   .inputArea {
-    .billContainer {
-      font-size: 1.3rem;
+    font-size: 1.4rem;
 
+    .billContainer {
       div {
         input {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
         }
 
         img {
-          width: 1rem;
+          width: 1.1rem;
         }
       }
     }
 
     .tipsPart {
-      font-size: 1.3rem;
-
-      button {
-        font-size: 1.5rem;
+      .tipOptions {
+        button {
+          font-size: 1.7rem !important;
+        }
       }
     }
 
     .peopleArea {
-      font-size: 1.3rem;
-
       div {
         img {
-          width: 1rem;
+          width: 1.1rem;
         }
 
         input {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
         }
       }
     }
@@ -192,6 +195,9 @@
 
 @media screen and (min-width: 700px) {
   .inputArea {
+    font-size: 1.5rem;
+    row-gap: 2.5rem;
+
     .tipsPart {
       .tipOptions {
         grid-template-columns: repeat(3, 1fr);
