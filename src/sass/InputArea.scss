@@ -93,6 +93,15 @@
       .custom {
         background-color: $very-light-grayish-cyan;
         color: $dark-grayish-cyan;
+        outline: none;
+        text-align: center;
+        width: 100%;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
 
       .custom:hover,

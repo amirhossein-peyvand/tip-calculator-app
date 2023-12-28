@@ -2,14 +2,25 @@ import dolorSign from "../assets/icon-dollar.svg";
 import "../sass/InputArea.scss";
 import person from "../assets/icon-person.svg";
 
-const InputArea = () => {
+interface Props {
+  onSetBill: (value: number) => void;
+}
+
+const InputArea = ({ onSetBill }: Props) => {
   return (
     <section className="inputArea">
       <section className="billContainer">
         <label htmlFor="bill">Bill</label>
         <div>
           <img src={dolorSign} alt="dolorSign" />
-          <input id="bill" className="bill" type="number" placeholder="0" />
+          <input
+            className="bill"
+            id="bill"
+            min={0}
+            onChange={(event) => onSetBill(Number(event.target.value))}
+            placeholder="0"
+            type="number"
+          />
         </div>
       </section>
       <section className="tipsPart">
@@ -20,14 +31,18 @@ const InputArea = () => {
           <button className="tipPercentage fifteen">15%</button>
           <button className="tipPercentage twentyfive">25%</button>
           <button className="tipPercentage fifty">50%</button>
-          <button className="tipPercentage custom">Custom</button>
+          <input
+            className="tipPercentage custom"
+            type="number"
+            placeholder="Custom"
+          />
         </div>
       </section>
       <section className="peopleArea">
         <label htmlFor="numOfPeople">Number of People</label>
         <div>
           <img src={person} alt="person" />
-          <input type="number" id="numOfPeople" placeholder="0" />
+          <input id="numOfPeople" min={0} placeholder="0" type="number" />
         </div>
       </section>
     </section>

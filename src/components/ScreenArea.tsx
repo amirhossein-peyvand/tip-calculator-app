@@ -1,6 +1,9 @@
 import "../sass/ScreenArea.scss";
+interface Props {
+  bill: number;
+}
 
-const ScreenArea = () => {
+const ScreenArea = ({ bill }: Props) => {
   return (
     <section className="screenArea">
       <section>
@@ -20,7 +23,8 @@ const ScreenArea = () => {
             <span>/ person</span>
           </div>
           <p className="totalAmount">
-            <span>$</span>0.00
+            <span>$</span>
+            {bill || "0.00"}
           </p>
         </div>
       </section>
