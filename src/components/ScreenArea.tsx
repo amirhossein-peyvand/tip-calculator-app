@@ -1,9 +1,10 @@
 import "../sass/ScreenArea.scss";
 interface Props {
-  bill: number;
+  totalPerPerson: number;
+  tipPerPerson: number;
 }
 
-const ScreenArea = ({ bill }: Props) => {
+const ScreenArea = ({ totalPerPerson, tipPerPerson }: Props) => {
   return (
     <section className="screenArea">
       <section>
@@ -14,7 +15,7 @@ const ScreenArea = ({ bill }: Props) => {
           </div>
           <p className="tipAmount">
             <span>$</span>
-            0.00
+            {tipPerPerson || "0.00"}
           </p>
         </div>
         <div className="group">
@@ -24,7 +25,7 @@ const ScreenArea = ({ bill }: Props) => {
           </div>
           <p className="totalAmount">
             <span>$</span>
-            {bill || "0.00"}
+            {totalPerPerson || "0.00"}
           </p>
         </div>
       </section>
