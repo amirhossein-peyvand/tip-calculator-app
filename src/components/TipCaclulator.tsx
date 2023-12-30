@@ -39,7 +39,12 @@ const TipCaclulator = () => {
         onSetNumOfPeople={(value) => setNumOfPeople(value)}
         onSetTipPercentage={(value) => setTipPercentage(value)}
       />
-      <ScreenArea totalPerPerson={totalPerPerson} tipPerPerson={tipPerPerson} />
+      <ScreenArea
+        onResetTip={(value) => setTipPercentage(value)}
+        onResetTotal={(value) => setBill(value)}
+        totalPerPerson={totalPerPerson}
+        tipPerPerson={tipPerPerson}
+      />
     </article>
   );
 };

@@ -2,9 +2,16 @@ import "../sass/ScreenArea.scss";
 interface Props {
   totalPerPerson: number;
   tipPerPerson: number;
+  onResetTotal: (value: number) => void;
+  onResetTip: (value: number) => void;
 }
 
-const ScreenArea = ({ totalPerPerson, tipPerPerson }: Props) => {
+const ScreenArea = ({
+  totalPerPerson,
+  tipPerPerson,
+  onResetTip,
+  onResetTotal,
+}: Props) => {
   return (
     <section className="screenArea">
       <section>
@@ -29,7 +36,15 @@ const ScreenArea = ({ totalPerPerson, tipPerPerson }: Props) => {
           </p>
         </div>
       </section>
-      <button className="resetBtn">RESET</button>
+      <button
+        className="resetBtn"
+        onClick={() => {
+          onResetTip(0);
+          onResetTotal(0);
+        }}
+      >
+        RESET
+      </button>
     </section>
   );
 };
